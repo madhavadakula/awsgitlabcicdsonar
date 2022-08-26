@@ -49,7 +49,7 @@ sonarcloud-check:
   tags:
     - awsgitlabcicdsonar
 
- # image: maven:3.6.3-jdk-11
+ #image: maven:3.6.3-jdk-11
   script:
     - mvn verify sonar:sonar -Dsonar.projectKey=madhavadakula_awsgitlabcicdsonar
   
