@@ -20,7 +20,7 @@ cache:
 build_job:
   stage: build
   tags:
-    - awsgitrunner 
+    - awsgitlabcicdsonar 
 
   script: 
     - echo "Maven compile started"
@@ -29,7 +29,7 @@ build_job:
 test_job:
   stage: test
   tags:
-    - awsgitrunner 
+    - awsgitlabcicdsonar 
 
   script: 
     - echo "Maven test started"
@@ -38,7 +38,7 @@ test_job:
 package_job:
   stage: package
   tags:
-    - awsgitrunner 
+    - awsgitlabcicdsonar 
 
   script: 
     - echo "Maven packaging started"
@@ -48,5 +48,5 @@ sonarcloud-check:
   stage: sonar
  #image: maven:3.6.3-jdk-11
   script:
-    - mvn verify sonar:sonar -Dsonar.projectKey=madhavadakula_gitlabcicd
+    - mvn verify sonar:sonar -Dsonar.projectKey=madhavadakula_awsgitlabcicdsonar
   
